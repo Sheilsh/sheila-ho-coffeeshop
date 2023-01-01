@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  color: #393939;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header styling */
+h1, h2 {
+  display: inline-block;
+  font-size: 3.8em;
+  font-weight: 300;
+}
+
+h3, .footer__heading {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* navigation - icon and header content */
+.nav {
+  background-color: #FFF0ED;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__icon {
+  min-width: 3rem;
+  max-width: 75rem;
+  margin-right: 0.5rem;
+}
+.nav__header {
+  font-size: 3rem;
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  list-style: none;
+}
+.nav__items {
+  font-size: 1.1em;
+  list-style: none;
+  color: #393939;
+}
+.nav__items--blue {
+  color: #5BACC3;
+}
+
+/* footer section */
+.footer {
+  background-color: #FFF0ED;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30%;
+  padding: 3.5rem 0;
+  position: relative;
+}
+.footer__heading {
+  margin-bottom: 0.9rem;
+}
+.footer__days--bold {
+  font-weight: bold;
+}
+.footer__icon {
+  min-width: 3rem;
+  max-width: 75rem;
+}
+.footer__img {
+  width: 6rem;
+  min-width: 3.75rem;
+  max-width: 7.5rem;
+  opacity: 25%;
+}
+.footer__img--before {
+  position: absolute;
+  bottom: 100px;
+  left: -30px;
+}
+.footer__img--after {
+  position: absolute;
+  bottom: 25px;
+  right: -35px;
+}
+
+/* menu hero */
+.menu {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 36rem;
+  max-height: 37.5rem;
+  background-image: url("../assets/coffee-circle.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.menu__box {
+  min-width: 17.5rem;
+  max-width: 18.75rem;
+  min-height: 11.25rem;
+  max-height: 12.5rem;
+  outline: 5px solid #5BACC3;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transform: translateY(100%);
+  z-index: 1;
+}
+.menu__box::before {
+  content: " ";
+  position: absolute;
+  transform: translate(15px, 15px);
+  width: 18.75rem;
+  height: 11.25rem;
+  background-color: #393939;
+  box-sizing: border-box;
+  text-align: center;
+  color: #FFF0ED;
+  z-index: -1;
+}
+
+/* menu navigation */
+.menuOptions {
+  min-width: 100%;
+  max-width: 100%;
+  background-color: #393939;
+  color: #FFF;
+  text-align: center;
+  border-width: 4px;
+  border-color: #5BACC3;
+}
+.menuOptions__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  min-height: 60px;
+  max-height: 80px;
+}
+.menuOptions__list {
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-left: 4px solid #5BACC3;
+  padding-left: 1rem;
+}
+
+/* menu item section */
+section {
+  padding: 1rem;
+}
+
+.hotDrinks, .coldDrinks, .pastries {
+  background-color: #FFF0ED;
+  text-align: center;
+}
+.hotDrinks__title, .coldDrinks__title, .pastries__title {
+  font-size: 3.2em;
+  margin: 1rem 0 2.5rem;
+}
+.hotDrinks__headers, .coldDrinks__headers, .pastries__headers {
+  font-size: 2em;
+  margin-bottom: 0.3rem;
+}
+.hotDrinks__descriptions, .coldDrinks__descriptions, .pastries__descriptions {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  inline-size: 480px;
+}
+.hotDrinks__price, .coldDrinks__price, .pastries__price {
+  color: #5BACC3;
+  padding: 0.2em 0 1em 0;
+  font-size: 1.2em;
+}
+
+.coldDrinks--pink {
+  background-color: #F7F7F7;
+}/*# sourceMappingURL=menu.css.map */

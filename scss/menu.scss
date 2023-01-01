@@ -1,0 +1,110 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/global' as *;
+
+
+/* menu hero */
+
+.menu {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 36rem;
+    max-height: 37.5rem;
+    background-image: url("../assets/coffee-circle.jpg");
+    background-position: center;
+    background-size: cover;
+
+    &__box {
+        min-width: 17.5rem;
+        max-width: 18.75rem;
+        min-height: 11.25rem;
+        max-height: 12.5rem;
+        outline: 5px solid $primary-color1;
+        color: $font-colorSecondary;
+        text-align: center;
+        text-transform: uppercase;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        transform: translateY(100%);
+        z-index: 1;
+    }
+
+    &__box::before {
+        content: " ";
+        position: absolute;
+        transform: translate(15px, 15px);
+        width: 18.75rem;
+        height: 11.25rem;
+        background-color: $neutral-color1;
+        box-sizing: border-box;
+        text-align: center;
+        color: $primary-color2;
+        z-index: -1;
+    }
+}
+
+/* menu navigation */
+
+.menuOptions {
+    min-width: 100%;
+    max-width: 100%;
+    background-color: $neutral-color1;
+    color: $font-colorSecondary;
+    text-align: center;
+    border-width: 4px;
+    border-color: $primary-color1;
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        min-height: 60px;
+        max-height: 80px;
+    }
+
+    &__list {
+        color: $font-colorSecondary;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-left: 4px solid $primary-color1;
+        padding-left: 1rem;
+    }
+}
+
+/* menu item section */
+
+section {
+    padding: 1rem;
+}
+
+.hotDrinks, .coldDrinks, .pastries {
+    background-color: $primary-color2;
+    text-align: center;
+
+    &__title {
+        @include menu-title;
+    }
+
+    &__headers {
+        @include menu-header;
+    }
+
+    &__descriptions {
+        @include menu-descriptions;
+    }
+
+    &__price {
+        @include price;
+        font-size: 1.2em;
+    }
+
+}
+
+.coldDrinks--pink {
+    background-color: $neutral-color3;
+}

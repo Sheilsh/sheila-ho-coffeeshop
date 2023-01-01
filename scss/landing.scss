@@ -1,0 +1,246 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/global' as *;
+
+
+/* main hero section */
+
+.nitro {
+    background-color: $primary-color2;
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+ 
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__header {
+        margin: 1rem 0; 
+    }
+
+    &__content {
+        inline-size: 22rem;
+        margin-top: 1rem;
+    }
+
+    &__img {
+        position: relative;
+        top: 1.6rem;
+        margin-bottom: 5rem;
+    }
+
+    &__button {
+        @include button;
+        width: 11.25rem;
+    }
+
+}
+
+/* Our Product - cardbox section */
+
+.products {
+    text-align: center;
+    padding: 2rem 0 3rem 0;
+    background-color: $neutral-color3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__title {
+        font-size: 3.5rem;
+        padding: 2rem;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+/* card section */
+
+.card {
+    min-width: 20.6rem;
+    max-width: 22rem;
+    min-height: 27.5rem;
+    max-height: 28.75rem;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
+    background-color: $neutral-color4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__content {
+        background-color: $primary-color2;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__img {
+       @include card-img;
+       margin-top: 2rem;
+    }
+
+    &__title {
+        margin: 2.2rem 0 0 0;
+    }
+
+    &__details {
+        font-size: 1.12rem;
+        color: $font-alternate;
+        text-align: left;
+        padding: 0 0 2rem 0;
+    }
+
+    &__price {
+        @include price;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 2.5rem;
+    }
+
+    &__button {
+        @include button;
+    }
+
+}
+
+/* discount section */
+
+.discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    padding: 5rem 0;
+    margin: auto;
+
+
+    &__mainbox {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 31rem;
+    }
+
+    &__header {
+        margin: 1rem 0;
+    }
+
+    &__description {
+        inline-size: 25rem;
+    }
+
+    &__icon-container {
+        display: flex;
+        gap: 8rem;
+    }
+
+    &__icons {
+        @include icon;
+        max-width: 5%;
+        margin: 2rem 0;
+    }
+
+    &__button {
+        @include button;
+        width: 11.25rem;
+    }
+
+
+
+    // we're different image section 
+
+    &__promoimage {
+        min-width: 25rem;
+        max-width: 31.25rem;
+        height: 25rem;
+        padding: 1.25rem;
+        outline: 5px solid $primary-color1;
+        position: relative;
+        z-index: 1;
+
+
+        &::after {
+            content: " ";
+            position: absolute;
+            transform: translate(20px, 20px);
+            inset: 0;
+            background-image: url('../assets/coldbrewbackground.png');
+            background-position: center;
+            background-size: cover;
+            z-index: -2;
+        }
+    }
+
+    &__tiltedcan-box {
+        position: absolute;
+        transform: translate(105px, 42px);
+    }
+
+    &__img {
+        @include card-img;
+
+        &:hover {
+            animation: rotate 2s linear infinite;
+        
+            @keyframes rotate {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        }
+    }
+
+
+    /* discount promo banner section */
+
+    &__banner {
+        min-width: min-content;
+        max-width: 90%;
+        background-color: $neutral-color1;
+        color: $neutral-color4;
+        text-align: center;
+        margin: 5rem 0;
+        animation: 2.5s infinite alternate flash;
+
+        @keyframes flash {
+            0% {
+                background-color: $neutral-color1;
+            }
+            100% {
+                background-color: $primary-color1;
+            }
+        }
+    }
+
+    &__code {
+        font-size: 2.5em;
+        font-weight: 400;
+        padding: 2rem 5rem;
+
+    }
+
+    &__banner--bold {
+        font-weight: bold;
+    }
+
+}
